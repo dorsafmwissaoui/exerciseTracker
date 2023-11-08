@@ -1,0 +1,24 @@
+name: Deploy Node Express app from another provider
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Download the app from the provider
+        run: |
+          # Replace with the appropriate commands to download the app from the provider
+
+      - name: Copy the app to the deployment directory
+        run: |
+          cp -r ./app ./dist
+
+      - name: Start the app
+        run: |
+          # Replace with the appropriate commands to start the app
